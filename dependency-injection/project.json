@@ -1,0 +1,23 @@
+{
+  "name": "dependency-injection",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "dependency-injection/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/dependency-injection",
+        "main": "dependency-injection/src/index.ts",
+        "tsConfig": "dependency-injection/tsconfig.lib.json",
+        "assets": ["dependency-injection/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": []
+}

@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@genz-shop/core": ["core/src/index.ts"],
+      "@genz-shop/dependency-injection": ["dependency-injection/src/index.ts"],
       "@genz-shop/infrastructure": ["infrastructure/src/index.ts"],
       "@genz-shop/presenter": ["presenter/src/index.ts"],
       "@genz-store/layout": ["modules/layout/src/index.ts"],

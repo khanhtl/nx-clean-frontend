@@ -1,1 +1,2 @@
-export * from './lib/infrastructure';
+export * from './lib/ProductsFakeStoreRepository';
+export * from './lib/ProductsInmemoryRepository';
