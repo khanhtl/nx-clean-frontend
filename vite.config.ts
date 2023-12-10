@@ -2,7 +2,8 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-
+import Components from 'unplugin-vue-components/vite';
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 export default defineConfig({
   root: __dirname,
   cacheDir: './node_modules/.vite/.',
@@ -17,7 +18,17 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [vue(), nxViteTsPaths()],
+  plugins: [
+    vue(),
+    nxViteTsPaths(),
+    Components({
+      resolvers: [
+        AntDesignVueResolver({
+          importStyle: false, // css in js
+        }),
+      ],
+    }),
+  ],
 
   // Uncomment this if you are using workers.
   // worker: {
